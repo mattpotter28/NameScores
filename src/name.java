@@ -21,6 +21,7 @@ public class name {
 
     int computeScore(String n) {
         int s = 0;
+
         scorer.put("M", 13);
         scorer.put("A", 1);
         scorer.put("T", 20);
