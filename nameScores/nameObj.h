@@ -4,17 +4,19 @@
 
 using namespace std;
 
+extern char scorer[26];
+
 class nameObj
 {
 private:
 	string name;
 	int score;
-	map<string, int> scorer;
 
 public:
 	nameObj();
 	nameObj(string);
-	int computeScore();
+	~nameObj();
+	int computeScore(string);
 	string getName();
 	int getScore();
 	void setName(string);

@@ -1,18 +1,39 @@
 #include "nameObj.h"
+#include <iostream>
+#include <vector>
+#include <map>
+#include <fstream> 
+
+using namespace std;
 
 int main() 
 {
-	// declare a list to hold nameObjs
+	vector<nameObj> nameObjs;
+	map<nameObj, int> nameScores;
+	ifstream inFile("names.txt");
+	string name;
 
-	// declare a map<nameObj, int> nameScores
+	// TODO: try and catch block for file open/read errors
+	while (getline(inFile, name))
+	{
+		nameObj temp(name);
+		nameObjs.push_back(temp);
+	}
 
-	// fill list with values from names.txt, calling the nameObj(string) constructor
 
-	// sort list by alphabetical order
 
-	// iterate through the list, computing the nameScore (score * position) and inserting the results into nameScores
+	// ======= temporary for testing purposes ========
+	for (int i = 0; i < nameObjs.size(); i++) {
+		cout << "Name: " << nameObjs[i].getName() << endl;
+		cout << "Score : " << nameObjs[i].getScore() << endl;
+		cout << endl;
+	}
+	// ===============================================
 
+
+	// iterate through the vector, computing the nameScore (score * position) and inserting the results into nameScores
 	// print out total
+
 
 	return 0;
 }
