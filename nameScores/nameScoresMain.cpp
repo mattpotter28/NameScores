@@ -39,7 +39,8 @@ int main()
 		int nameScore= nameObjs[i].getScore()*(i+1);
 		nameScores.insert(pair<nameObj, int>(nameObjs[i], nameScore);
 	}
-	
+				  
+	cout<< "Total Name Score: " << nameScores << endl; 
 
 	return 0;
 }
