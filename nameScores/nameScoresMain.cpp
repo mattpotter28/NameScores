@@ -34,6 +34,12 @@ int main()
 	// iterate through the vector, computing the nameScore (score * position) and inserting the results into nameScores
 	// print out total
 
+	for(int i=0; i<nameObjs.size(); i++)
+	{
+		int nameScore= nameObjs[i].getScore()*(i+1);
+		nameScores.insert(pair<nameObj, int>(nameObjs[i], nameScore);
+	}
+	
 
 	return 0;
 }
