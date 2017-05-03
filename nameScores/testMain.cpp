@@ -23,8 +23,7 @@ int main()
   
   //Added by Abhi
   // Testing loading into map and calculation of total.
-	int total = 0;
-	int i = 1;
+	
 	for (map<string,int>::iterator it = nameScores.begin(); it!=nameScores.end() ; ++it)
 	{
 		cout << it->first << " " << it->second << endl;
