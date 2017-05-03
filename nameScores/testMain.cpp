@@ -27,11 +27,9 @@ int main()
 	int i = 1;
 	for (map<string,int>::iterator it = nameScores.begin(); it!=nameScores.end() ; ++it)
 	{
-
-		//cout << it->first << " " << it->second << endl;
-		total += it->second * i++;
+		cout << it->first << " " << it->second << endl;
 	}
-	cout << total << endl;
+	
 	
   //This is Bariscan's code
 	/*for (int i = 0; i<nameObjs.size(); i++)
