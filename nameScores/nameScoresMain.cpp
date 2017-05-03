@@ -22,25 +22,18 @@ int main()
 
 
 
-	// ======= temporary for testing purposes ========
+	// iterate through the vector, computing the nameScore (score * position) and inserting the results into nameScores
+	// print out total
+
 	for (int i = 0; i < nameObjs.size(); i++) {
 		cout << "Name: " << nameObjs[i].getName() << endl;
 		cout << "Score : " << nameObjs[i].getScore() << endl;
 		cout << endl;
-	}
-	// ===============================================
-
-
-	// iterate through the vector, computing the nameScore (score * position) and inserting the results into nameScores
-	// print out total
-
-	for(int i=0; i<nameObjs.size(); i++)
-	{
-		int nameScore= nameObjs[i].getScore()*(i+1);
-		nameScores.insert(pair<nameObj, int>(nameObjs[i], nameScore);
+		
+		int totalScores+= nameObjs[i].getScore();
 	}
 				  
-	cout<< "Total Name Score: " << nameScores << endl; 
+	cout<< "Total Name Score: " << totalScores << endl; 
 
 	return 0;
 }
