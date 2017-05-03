@@ -6,10 +6,9 @@
 
 using namespace std;
 
-int main() 
+int main()
 {
-	vector<nameObj> nameObjs;
-	map<nameObj, int> nameScores;
+	map<string, int> nameScores;
 	ifstream inFile("names.txt");
 	string name;
 
@@ -17,23 +16,18 @@ int main()
 	while (getline(inFile, name))
 	{
 		nameObj temp(name);
-		nameObjs.push_back(temp);
+		nameScores.insert(pair<string, int>(temp.getName(), temp.getScore()));
 	}
-
-
-
-	// iterate through the vector, computing the nameScore (score * position) and inserting the results into nameScores
-	// print out total
-
-	for (int i = 0; i < nameObjs.size(); i++) {
-		cout << "Name: " << nameObjs[i].getName() << endl;
-		cout << "Score : " << nameObjs[i].getScore() << endl;
-		cout << endl;
-		
-		int totalScores+= nameObjs[i].getScore();
+  
+	int total = 0;
+	int i = 1;
+	for (map<string,int>::iterator it = nameScores.begin(); it!=nameScores.end() ; ++it)
+	{
+		total += it->second * i;
 	}
-				  
-	cout<< "Total Name Score: " << totalScores << endl; 
-
+	cout << "Total Name Score: " << total << endl;
+	
+ 
+	system("pause");
 	return 0;
 }
